@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Spowrens Digital</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        :root {
+            --primary-bg: #EEFAFE;
+            --primary-accent: #FF5B00;
+            --neobrutal-black: #000000;
+            --neobrutal-white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-light: #666666;
+            --section-bg: #FFFFFF;
+            --border-radius: 12px;
+            --shadow: 8px 8px 0px var(--neobrutal-black);
+            --shadow-hover: 12px 12px 0px var(--neobrutal-black);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--section-bg);
+            border: 3px solid var(--neobrutal-black);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            animation: slideUp 0.5s ease-out 0.2s both;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            background-color: var(--primary-accent);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--neobrutal-black);
+            box-shadow: 5px 5px 0px var(--neobrutal-black);
+        }
+        
+        .logo-icon i {
+            font-size: 28px;
+            color: var(--neobrutal-white);
+        }
+        
+        .logo-text h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+        
+        .logo-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .last-updated {
+            text-align: center;
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        /* Navigation */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-accent);
+            border: 3px solid var(--neobrutal-black);
+            border-radius: var(--border-radius);
+            padding: 15px 25px;
+            margin-top: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-link {
+            color: var(--neobrutal-white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .nav-link:hover {
+            background-color: var(--neobrutal-white);
+            color: var(--primary-accent);
+            border: 2px solid var(--neobrutal-black);
+            transform: translateY(-3px);
+        }
+        
+        .back-button {
+            background-color: var(--neobrutal-white);
+            color: var(--primary-accent);
+            border: 3px solid var(--neobrutal-black);
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            box-shadow: 5px 5px 0px var(--neobrutal-black);
+        }
+        
+        .back-button:hover {
+            background-color: var(--neobrutal-black);
+            color: var(--neobrutal-white);
+            transform: translateY(-5px) translateX(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        /* Main Content */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            animation: slideUp 0.5s ease-out 0.4s both;
+        }
+        
+        /* Table of Contents */
+        .toc-container {
+            background-color: var(--section-bg);
+            border: 3px solid var(--neobrutal-black);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+            position: sticky;
+            top: 30px;
+        }
+        
+        .toc-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-accent);
+            border-bottom: 3px solid var(--neobrutal-black);
+            padding-bottom: 10px;
+        }
+        
+        .toc-list {
+            list-style-type: none;
+        }
+        
+        .toc-item {
+            margin-bottom: 12px;
+        }
+        
+        .toc-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 12px;
+            display: block;
+            border-radius: 8px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .toc-link:hover {
+            background-color: var(--primary-accent);
+            color: var(--neobrutal-white);
+            border: 2px solid var(--neobrutal-black);
+            transform: translateX(5px);
+        }
+        
+        .toc-link.active {
+            background-color: var(--primary-accent);
+            color: var(--neobrutal-white);
+            border: 2px solid var(--neobrutal-black);
+        }
+        
+        /* Content Sections */
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .content-section {
+            background-color: var(--section-bg);
+            border: 3px solid var(--neobrutal-black);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            animation: slideUp 0.5s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .content-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+        
+        .section-icon {
+            background-color: var(--primary-accent);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--neobrutal-black);
+        }
+        
+        .section-icon i {
+            font-size: 24px;
+            color: var(--neobrutal-white);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .section-content p {
+            margin-bottom: 20px;
+        }
+        
+        .section-content ul, .section-content ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .section-content li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 91, 0, 0.1);
+            border-left: 4px solid var(--primary-accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .warning {
+            background-color: rgba(255, 91, 0, 0.15);
+            border: 3px solid var(--primary-accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .warning i {
+            color: var(--primary-accent);
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--section-bg);
+            border: 3px solid var(--neobrutal-black);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            animation: slideUp 0.5s ease-out 0.6s both;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        
+        .footer-tagline {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        
+        .contact-item i {
+            color: var(--primary-accent);
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            border-top: 2px solid var(--neobrutal-black);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            
+            .toc-container {
+                position: static;
+                margin-bottom: 20px;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            header, .content-section, .toc-container, footer {
+                padding: 20px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">
+                <i class='bx bxs-shield-alt-2'></i>
+            </div>
+            <div class="logo-text">
+                <h1>SPOWRENS DIGITAL</h1>
+                <p>Your Digital Solutions</p>
+            </div>
+        </div>
+        
+        <h1 class="page-title">SYARAT & KETENTUAN LAYANAN</h1>
+        <p class="last-updated">Terakhir diperbarui: 15 Oktober 2023</p>
+        
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#" class="nav-link"><i class='bx bxs-home'></i> Beranda</a>
+                <a href="#" class="nav-link"><i class='bx bxs-user'></i> Tentang Kami</a>
+                <a href="#" class="nav-link"><i class='bx bxs-envelope'></i> Kontak</a>
+                <a href="#" class="nav-link"><i class='bx bxs-document'></i> Kebijakan Privasi</a>
+            </div>
+            
+            <a href="#" class="back-button">
+                <i class='bx bx-arrow-back'></i>
+                Kembali ke Situs Utama
+            </a>
+        </div>
+    </header>
+    
+    <main>
+        <aside class="toc-container">
+            <h2 class="toc-title">Daftar Isi</h2>
+            <ul class="toc-list">
+                <li class="toc-item"><a href="#section-1" class="toc-link active">1. Pengenalan</a></li>
+                <li class="toc-item"><a href="#section-2" class="toc-link">2. Definisi Istilah</a></li>
+                <li class="toc-item"><a href="#section-3" class="toc-link">3. Pendaftaran & Akun</a></li>
+                <li class="toc-item"><a href="#section-4" class="toc-link">4. Hak Kekayaan Intelektual</a></li>
+                <li class="toc-item"><a href="#section-5" class="toc-link">5. Pembayaran & Tagihan</a></li>
+                <li class="toc-item"><a href="#section-6" class="toc-link">6. Batasan Tanggung Jawab</a></li>
+                <li class="toc-item"><a href="#section-7" class="toc-link">7. Perubahan Layanan</a></li>
+                <li class="toc-item"><a href="#section-8" class="toc-link">8. Hukum yang Berlaku</a></li>
+                <li class="toc-item"><a href="#section-9" class="toc-link">9. Kontak Kami</a></li>
+            </ul>
+        </aside>
+        
+        <div class="content-container">
+            <section id="section-1" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-info-circle'></i>
+                    </div>
+                    <h2 class="section-title">1. Pengenalan</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>Selamat datang di <strong>Spowrens Digital</strong>. Syarat dan Ketentuan Layanan ("S&K") ini mengatur penggunaan Anda atas layanan, situs web, dan aplikasi yang disediakan oleh Spowrens Digital ("Kami").</p>
+                    
+                    <p>Dengan mengakses atau menggunakan layanan Kami, Anda menyetujui untuk terikat oleh S&K ini. Jika Anda tidak setuju dengan semua atau sebagian dari S&K ini, mohon untuk tidak menggunakan layanan Kami.</p>
+                    
+                    <div class="highlight">
+                        <p><strong>Penting:</strong> Layanan Kami ditujukan untuk individu yang berusia minimal 18 tahun atau telah mendapatkan persetujuan dari wali yang sah. Dengan menggunakan layanan Kami, Anda menyatakan dan menjamin bahwa Anda memenuhi persyaratan usia ini.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="section-2" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-book-open'></i>
+                    </div>
+                    <h2 class="section-title">2. Definisi Istilah</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>Untuk tujuan S&K ini, istilah berikut memiliki arti sebagai berikut:</p>
+                    
+                    <ul>
+                        <li><strong>"Layanan"</strong> merujuk pada semua produk, layanan, konten, fitur, teknologi, perangkat lunak, dan fungsi yang disediakan oleh Spowrens Digital melalui situs web atau aplikasi.</li>
+                        <li><strong>"Pengguna"</strong> adalah setiap individu atau entitas yang mengakses atau menggunakan Layanan Kami.</li>
+                        <li><strong>"Akun"</strong> adalah profil pengguna yang dibuat untuk mengakses dan menggunakan Layanan Kami.</li>
+                        <li><strong>"Konten"</strong> mencakup teks, gambar, audio, video, perangkat lunak, kode, dan materi lainnya yang tersedia melalui Layanan Kami.</li>
+                        <li><strong>"Langganan"</strong> adalah akses berbayar ke Layanan Kami untuk jangka waktu tertentu.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="section-3" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-user-plus'></i>
+                    </div>
+                    <h2 class="section-title">3. Pendaftaran & Akun</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>Untuk menggunakan beberapa fitur Layanan Kami, Anda mungkin perlu membuat akun. Saat membuat akun, Anda setuju untuk:</p>
+                    
+                    <ol>
+                        <li>Memberikan informasi yang akurat, terkini, dan lengkap tentang diri Anda</li>
+                        <li>Memperbarui informasi akun Anda agar tetap akurat dan terkini</li>
+                        <li>Menjaga kerahasiaan kata sandi dan semua aktivitas yang terjadi di bawah akun Anda</li>
+                        <li>Memberitahu Kami segera tentang penggunaan akun yang tidak sah atau pelanggaran keamanan lainnya</li>
+                    </ol>
+                    
+                    <div class="warning">
+                        <i class='bx bx-error'></i>
+                        <div>
+                            <p><strong>Peringatan Keamanan:</strong> Anda bertanggung jawab penuh atas semua aktivitas yang terjadi di bawah akun Anda. Spowrens Digital tidak bertanggung jawab atas kerugian yang timbul akibat penggunaan akun Anda yang tidak sah.</p>
+                        </div>
+                    </div>
+                    
+                    <p>Kami berhak untuk menangguhkan atau menghentikan akun Anda jika kami memiliki alasan untuk percaya bahwa Anda telah melanggar S&K ini.</p>
+                </div>
+            </section>
+            
+            <section id="section-4" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-copyright'></i>
+                    </div>
+                    <h2 class="section-title">4. Hak Kekayaan Intelektual</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>Semua hak kekayaan intelektual dalam Layanan Kami dan materi yang terkandung di dalamnya adalah milik Spowrens Digital atau pemberi lisensi Kami. Hak-hak ini dilindungi oleh undang-undang hak cipta dan perjanjian internasional.</p>
+                    
+                    <p>Anda diberikan lisensi terbatas, tidak eksklusif, dan tidak dapat dialihkan untuk mengakses dan menggunakan Layanan Kami untuk keperluan pribadi atau bisnis Anda sendiri, sesuai dengan S&K ini.</p>
+                    
+                    <p>Anda tidak boleh:</p>
+                    
+                    <ul>
+                        <li>Menyalin, memodifikasi, atau membuat karya turunan dari Layanan Kami</li>
+                        <li>Mendistribusikan, mensublisensikan, menjual, atau menyewakan bagian mana pun dari Layanan Kami</li>
+                        <li>Membalik rekayasa atau mengekstrak kode sumber dari Layanan Kami</li>
+                        <li>Menghapus atau mengaburkan pemberitahuan hak cipta atau milik lainnya yang terkandung dalam Layanan Kami</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="section-5" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-credit-card'></i>
+                    </div>
+                    <h2 class="section-title">5. Pembayaran & Tagihan</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>Beberapa bagian dari Layanan Kami memerlukan pembayaran. Dengan membeli Langganan atau layanan berbayar lainnya, Anda setuju untuk:</p>
+                    
+                    <ol>
+                        <li>Memberikan informasi pembayaran yang akurat dan lengkap</li>
+                        <li>Membayar semua biaya yang dikenakan sesuai dengan harga yang berlaku</li>
+                        <li>Memberikan wewenang kepada Kami untuk menarik dana dari metode pembayaran yang Anda pilih</li>
+                        <li>Memahami bahwa pembayaran bersifat non-refundable kecuali diatur lain oleh hukum yang berlaku</li>
+                    </ol>
+                    
+                    <p>Harga untuk Layanan Kami dapat berubah sewaktu-waktu. Kami akan memberi tahu Anda tentang perubahan harga yang memengaruhi Langganan Anda dan memberi Anda kesempatan untuk membatalkan.</p>
+                </div>
+            </section>
+            
+            <section id="section-6" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-shield-quarter'></i>
+                    </div>
+                    <h2 class="section-title">6. Batasan Tanggung Jawab</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>Layanan Kami disediakan "sebagaimana adanya" dan "sebagaimana tersedia". Sejauh diizinkan oleh hukum yang berlaku, Spowrens Digital menolak semua jaminan, baik tersurat maupun tersirat.</p>
+                    
+                    <p>Spowrens Digital tidak bertanggung jawab atas:</p>
+                    
+                    <ul>
+                        <li>Kerugian langsung, tidak langsung, insidental, khusus, atau konsekuensial apa pun</li>
+                        <li>Kehilangan keuntungan, pendapatan, data, atau goodwill</li>
+                        <li>Kerusakan atau kehilangan yang timbul dari penggunaan atau ketidakmampuan untuk menggunakan Layanan Kami</li>
+                        <li>Setiap konten atau tindakan pihak ketiga mana pun</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <p><strong>Batasan Tanggung Jawab:</strong> Dalam hal apa pun tanggung jawab kumulatif Spowrens Digital kepada Anda untuk semua klaim yang terkait dengan Layanan tidak akan melebihi jumlah yang telah Anda bayarkan kepada Spowrens Digital dalam enam (6) bulan terakhir sebelum peristiwa yang menyebabkan klaim.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="section-7" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-refresh'></i>
+                    </div>
+                    <h2 class="section-title">7. Perubahan Layanan</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>Kami berhak untuk memodifikasi, menangguhkan, atau menghentikan Layanan Kami (atau bagian darinya) kapan saja, dengan atau tanpa pemberitahuan. Kami tidak akan bertanggung jawab kepada Anda atau pihak ketiga mana pun untuk modifikasi, penangguhan, atau penghentian Layanan.</p>
+                    
+                    <p>Kami juga dapat merevisi S&K ini dari waktu ke waktu. Versi terbaru akan selalu tersedia di halaman ini. Dengan terus menggunakan Layanan setelah perubahan tersebut, Anda menyetujui untuk terikat oleh S&K yang direvisi.</p>
+                    
+                    <p>Jika Anda tidak setuju dengan S&K yang direvisi, Anda harus berhenti menggunakan Layanan Kami.</p>
+                </div>
+            </section>
+            
+            <section id="section-8" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-balance'></i>
+                    </div>
+                    <h2 class="section-title">8. Hukum yang Berlaku</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>S&K ini diatur oleh dan ditafsirkan sesuai dengan hukum Republik Indonesia, tanpa memperhatikan ketentuan-ketentuan hukum yang bertentangan.</p>
+                    
+                    <p>Setiap sengketa yang timbul dari atau berkaitan dengan S&K ini atau penggunaan Layanan Kami akan diselesaikan secara eksklusif oleh pengadilan yang berwenang di Jakarta, Indonesia.</p>
+                    
+                    <p>Jika ada ketentuan dalam S&K ini yang ditemukan tidak sah, tidak dapat diberlakukan, atau batal, ketentuan tersebut akan diberlakukan sejauh mungkin, dan ketentuan lainnya akan tetap berlaku sepenuhnya.</p>
+                </div>
+            </section>
+            
+            <section id="section-9" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <h2 class="section-title">9. Kontak Kami</h2>
+                </div>
+                
+                <div class="section-content">
+                    <p>Jika Anda memiliki pertanyaan tentang S&K ini, silakan hubungi kami melalui:</p>
+                    
+                    <ul>
+                        <li><strong>Email:</strong> legal@spowrensdigital.com</li>
+                        <li><strong>Telepon:</strong> +62 21 1234 5678</li>
+                        <li><strong>Alamat:</strong> Gedung Spowrens Digital, Jl. Teknologi No. 123, Jakarta Selatan, Indonesia 12560</li>
+                        <li><strong>Website:</strong> www.spowrensdigital.com/contact</li>
+                    </ul>
+                    
+                    <p>Kami akan berusaha menanggapi pertanyaan Anda dalam waktu 5 (lima) hari kerja.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <h2 class="footer-logo">SPOWRENS DIGITAL</h2>
+        <p class="footer-tagline">Neobrutalism Digital Solutions - Memberikan solusi digital dengan gaya yang berani dan tegas</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class='bx bx-envelope'></i>
+                <span>support@spowrensdigital.com</span>
+            </div>
+            <div class="contact-item">
+                <i class='bx bx-phone'></i>
+                <span>+62 21 1234 5678</span>
+            </div>
+            <div class="contact-item">
+                <i class='bx bx-map'></i>
+                <span>Jakarta, Indonesia</span>
+            </div>
+        </div>
+        
+        <p class="copyright">
+            © 2023 Spowrens Digital. Semua hak dilindungi undang-undang.<br>
+            Syarat dan Ketentuan ini adalah dokumen hukum yang mengikat. Disarankan untuk membacanya dengan seksama.
+        </p>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for table of contents links
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Update active link
+                document.querySelectorAll('.toc-link').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Smooth scroll to target
+                window.scrollTo({
+                    top: targetElement.offsetTop - 30,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Update active link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.content-section');
+            const scrollPos = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.toc-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Add animation to sections when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideUp 0.5s ease-out both';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Back button animation
+        document.querySelector('.back-button').addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px) translateX(-5px)';
+        });
+        
+        document.querySelector('.back-button').addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) translateX(0)';
+        });
+        
+        // Nav link hover effects
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
